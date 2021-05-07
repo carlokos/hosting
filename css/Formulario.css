@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    font-size: 16px Verdana;
+    min-height: 100vh 100vw; /* se ajusta a la vista del visitante */
+    /*ponemos una imagen de fondo */
+    background-image: url(../img/fondo_formulario.jpg);
+    /* Esto es para que ocupe bien la pantalla y no se repita */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    /* Para que todo el formulario este centrado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* editamos aqui los elementos del formulario */
+form{
+    width: 410px;
+    margin: auto;
+    background: rgba(0, 0, 0,0.3);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+    color: #fff;
+    z-index: 1;
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+    width: 100%;
+}
+
+h2{
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input{
+    padding: 7px;
+    margin-bottom: 15px;
+    box-sizing:17px;
+    border: none;
+}
+
+
+
+
+
+
+
+

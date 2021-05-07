@@ -1,0 +1,320 @@
+/* Empieza la decoracion para el slider */
+.slider{
+    width: 100%;
+    margin: auto;
+    overflow: hidden; /*oculta las imagenes que no se ven */
+}
+
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;  /*cada imagen es un 100% */
+    /* para poder animar el slider, hay que darle un nombre */
+    animation: cambio 20s infinite;
+    animation-direction: alternate; /*cuando termina la animacion, la hace de nuevo al reves */
+}
+
+.slider li{
+    list-style: none;
+    width: 100%;
+}
+/* para que el slider cuadre bien, todas las imagenes deben estar proporcionadas */
+.slider img {
+    width: 100%;
+}
+/* para ajustar la velocidad de nuestra animacion */
+@keyframes cambio {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+
+    75% { margin-left: -300%; }
+    100% { margin-left: -300%; }
+}
+
+ /* Termina la decoracion para el slider */
+
+ /* menu en la pagina index */
+header{
+    width: 100%;
+    height: 50px;
+    box-shadow: 1px 1px 5px #000;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+header nav{
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px;
+}
+
+/* boton que necesitamos para que el menu sea responsive */
+#btn-menu{
+    display: none;
+}
+
+header label{
+    display:none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+    justify-content: center;
+    justify-items: center;
+}
+
+header label img{
+    /* la imagen se ajusta a la etiqueta */
+    width: inherit;
+    height: inherit;
+}
+
+/* ocultamos el menu cuando no lo necesitamos */
+
+header label:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu ul {
+    margin: auto;
+    list-style: none;
+    display: flex; /*cuando este fuera de los margenes desaparece */
+}
+
+.menu ul li a{
+    color: #fff;
+    padding: 13px 20px 13px 20px;
+    font: 16px Verdana;
+    text-decoration: none;
+}
+
+.menu ul li a:hover{
+    color: silver;
+    background-color: gray;
+    animation: shadow-pulse 1000ms 1;
+}
+
+/* Se activa cuando la pantalla mide 800 o menos, este permite tener un menu responsive */
+@media (max-width:800px){
+    /* activamos el iconito para el menu */
+    header label{
+        display:block; /*lo mostramos cuando necesitamos */
+    }
+
+    header{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .menu{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 70%;
+        margin-left: -70%; /*al estar en negativo y pegado al borde izquierdo, el menu no se ve */
+        transition: all 0.2s;
+    }
+
+    /* cambiamos la direccion de la lista */
+    .menu ul{
+        flex-direction: column;   
+    }
+
+    .menu li{
+        border-top: 1px solid #fff;
+        padding: 5px;
+    }
+
+
+    /* este simbolo (alt + 126) ~ busca la clase o id en el archivo HTML*/
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+
+}
+
+#registro{
+    font:bold;
+    text-decoration: underline;
+    text-align: right;
+}
+
+/* Keyframes se usa para definir animaciones */
+@keyframes shadow-pulse {
+    0%{
+        box-shadow:0 0 0 0 rgba(128, 128, 128, 0.6);
+    }
+
+    100%{
+        box-shadow:0 0 8px 16px rgba(128, 128, 128, 0);
+    }
+}
+
+
+/* se acaba la animacion */
+
+/* Termina la decoracion del menu */
+
+/*cosas comunes en todo el index */
+body{
+    margin: 0;
+    font-size: 16px Verdana;
+    background: #f5f5f5;
+}
+
+section{
+    padding-bottom: 2px;
+}
+
+.container-all{
+    width: 100%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+}
+
+.container-all p{
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 4px;
+}
+
+.container-all h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+
+.container-all img{
+    width: 5%;
+    height: 5%;
+    max-height: fit-content;
+    display: block;
+}
+
+.container-all b{
+    font-size: 19px;
+}
+
+/* Terminamos con lo comun */
+
+/* Presentacion de la pagina */
+#Presentacion h2{
+  color: rgb(23, 128, 105);
+}
+
+#Presentacion div{
+    border-top: 6px solid #50ad86;
+    background-color: rgb(145, 228, 193);
+}
+
+#Presentacion img{
+    float: left;
+}
+/* Termina la presentacion */
+
+/* seccion objetivos de la pagina */
+#Objetivos h2{
+    color:rgb(212, 132, 40);
+}
+
+#Objetivos div{
+    border-top: 6px solid rgb(212, 132, 40);
+    background-color: rgb(245, 196, 141);
+}
+/* Termina la seccion de objetivos */
+
+/* Empieza la seccion de noticias */
+#Noticias h2{
+    color: rgba(63, 101, 226, 0.774);
+}
+
+#Noticias div{
+    border-top: 6px solid rgba(63, 101, 226, 0.774);
+    background-color: rgba(130, 153, 228, 0.774);
+}
+
+#Noticias p a:hover {
+    animation: shadow-pulse 1000ms 1;
+    color: rgb(255, 255, 255);
+}
+
+#Noticias p a{
+    color:rgb(61, 129, 192);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Termina la seccion de noticias */
+
+/* Empieza la seccion de contactos */
+#Contactos p{
+    text-align: center;
+}
+
+#Contactos ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+#Contactos ul li {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+#Contactos div{
+    border-top: 6px solid rgb(226, 201, 59);
+    background-color: rgb(236, 222, 142);
+}
+
+#Contactos h2{
+    color:rgb(199, 179, 63);
+}
+
+#Contactos img{
+    width: 50px;
+    height: 50px;
+}
+
+/* Termina la seccion de contactos */
+
+/* El footer */
+footer{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    background-color: #fff;
+}
+
+footer img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

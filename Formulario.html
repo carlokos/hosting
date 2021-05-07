@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jorge Carlos Parra">
+    <meta name="keywords" content="Frikinet, online, videojuegos, series, animes, nube, network">
+    <link rel="stylesheet" type="text/css" href="css/Formulario.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <title>Frikinet - Formulario</title>
+</head>
+
+<body>
+    <div>
+
+        <form action="http://www.Frikinet.com/form_respuestas.html" method="POST" enctype="multipart/form-data">
+            <h2>Formulario de contacto</h2>
+            <h3>* son campos obligatorios</h3>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <label for="Nombre">Nombre*:</label>
+                <input type="text" id="Nombre" name="Nombre" placeholder="Escribe tu nombre" required>
+                <br/>
+                <label for="Apellidos">Apellidos*:</label>
+                <input type="text" id="Apellidos" name="Apellidos" placeholder="Escribe tus apellidos" required>
+                <br/>
+                <h3>Indique su sexo*:</h3>
+                <input type="radio" id="Hombre" name="sexo" checked><label for="Hombre">Hombre</label>
+                <br/>
+                <input type="radio" id="Mujer" name="sexo"><label for="Mujer">Mujer</label>
+                <br/>
+                <input type="radio" id="Otro" name="sexo"><label for="Otro">Otro</label>
+                <br/>
+                <label for="correo">Email:</label>
+                <input type="email" id="correo" placeholder="ejemplo@dominio.com">
+                <br/>
+                <label for="telf">Telefono:</label>
+                <input type="tel" id="telf" name="telf" placeholder="000 00 00 00">
+            </fieldset>
+
+            <fieldset>
+                <legend>Formulario</legend>
+                <h3>¿Has contratado nuestros servicios?</h3>
+                <input type="radio" id="Si" name="opcion" checked><label for="Si">Si</label>
+                <input type="radio" id="No" name="opcion"><label for="No">No</label>
+                <br/>
+                <textarea id="textarea" name="textarea" placeholder="Escriba su mensaje"></textarea>
+                <br/>
+                <input type="submit" id="enviar" name="enviar" value="ENVIAR">
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+
